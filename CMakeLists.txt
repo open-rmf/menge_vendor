@@ -12,7 +12,15 @@ if(NOT CMAKE_CXX_STANDARD)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
+  add_compile_options(-Wall -Wextra -Wpedantic 
+    -Wno-deprecated 
+    -Wno-unused-parameter
+    -Wno-unknown-pragmas
+    -Wno-unused-but-set-variable
+    -Wno-unused-variable
+    -Wno-parentheses
+    -Wno-reorder
+    -Wno-endif-labels)
 endif()
 
 if(APPLE)

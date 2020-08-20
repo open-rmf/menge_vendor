@@ -214,19 +214,19 @@ void BaseAgent::addVelModifier(BFSM::VelModifier* v) { _velModifiers.push_back(v
 void BaseAgent::startQuery() {
   _nearAgents.clear();
   _nearObstacles.clear();
-};
+}
 
 ///////////////////////////////////////////////////////////
 
 void BaseAgent::filterAgent(const BaseAgent* agent, float distance) {
   insertAgentNeighbor(agent, distance);
-};
+}
 
 ///////////////////////////////////////////////////////////
 
 void BaseAgent::filterObstacle(const Obstacle* obstacle, float distance) {
   insertObstacleNeighbor(obstacle, distance);
-};
+}
 
 ///////////////////////////////////////////////////////////
 
