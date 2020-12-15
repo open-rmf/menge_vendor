@@ -45,26 +45,27 @@ file(
 	GLOB_RECURSE
 	source_files
 	${MENGE_SRC_DIR}/MengeCore/*.cpp
-	${MENGE_SRC_DIR}/MengeCore/*.h
 )
 
 add_library(
-	mengeCore
+	menge
 	SHARED
 	${source_files}
 )
 
-target_link_libraries ( mengeCore PUBLIC dl PRIVATE tinyxml )
+target_link_libraries ( menge PUBLIC dl PRIVATE tinyxml )
 
-set_target_properties( mengeCore PROPERTIES LINKER_LANGUAGE CXX )
+set_target_properties( menge PROPERTIES LINKER_LANGUAGE CXX )
 
 include(GNUInstallDirs)
 
 ament_export_include_directories(include)
-ament_export_libraries(mengeCore)
 
-install(TARGETS mengeCore
-  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+ament_export_targets(menge HAS_LIBRARY_TARGET)
+
+install(TARGETS menge
+  EXPORT menge
+  DESTINATION lib
 )
 
 install(
@@ -72,7 +73,7 @@ install(
     ${MENGE_SRC_DIR}/MengeCore
     ${MENGE_SRC_DIR}/../include/
     ${MENGE_SRC_DIR}/tinyxml
-  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+  DESTINATION include
   FILES_MATCHING PATTERN *.h
 )
 
