@@ -72,7 +72,7 @@ endif()
 
 install(TARGETS menge
   EXPORT menge
-  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  DESTINATION lib
 )
 
 install(
@@ -80,7 +80,7 @@ install(
     ${MENGE_SRC_DIR}/MengeCore
     ${MENGE_SRC_DIR}/../include/
     ${MENGE_SRC_DIR}/tinyxml
-  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+  DESTINATION include
   FILES_MATCHING PATTERN *.h
 )
 
