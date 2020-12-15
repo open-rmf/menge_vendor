@@ -61,14 +61,7 @@ include(GNUInstallDirs)
 
 ament_export_include_directories(include)
 
-if($ENV{ROS_DISTRO} STREQUAL foxy)
-  ament_export_targets(menge HAS_LIBRARY_TARGET)
-elseif($ENV{ROS_DISTRO} STREQUAL eloquent)
-  ament_export_interfaces(menge HAS_LIBRARY_TARGET)
-else()
-  message(FATAL_ERROR "Unsupported ROS distribution")
-endif()
-
+ament_export_targets(menge HAS_LIBRARY_TARGET)
 
 install(TARGETS menge
   EXPORT menge
