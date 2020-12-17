@@ -53,6 +53,18 @@ add_library(
 	${source_files}
 )
 
+file(
+  GLOB_RECURSE
+  tinyxml_sources
+  ${MENGE_SRC_DIR}/tinyxml/*.cpp
+)
+
+add_library(
+  tinyxml
+	SHARED
+	${tinyxml_sources}
+)
+
 target_link_libraries ( menge PUBLIC dl PRIVATE tinyxml )
 
 set_target_properties( menge PROPERTIES LINKER_LANGUAGE CXX )
@@ -62,13 +74,15 @@ include(GNUInstallDirs)
 ament_export_include_directories(include)
 
 ament_export_targets(menge HAS_LIBRARY_TARGET)
+ament_export_targets(tinyxml HAS_LIBRARY_TARGET)
 
-install(TARGETS menge
+INSTALL(
+  TARGETS menge
   EXPORT menge
   DESTINATION lib
 )
 
-install(
+INSTALL(
   DIRECTORY
     ${MENGE_SRC_DIR}/MengeCore
     ${MENGE_SRC_DIR}/../include/
@@ -77,5 +91,11 @@ install(
   FILES_MATCHING PATTERN *.h
 )
 
+INSTALL(
+  TARGETS tinyxml
+  EXPORT tinyxml
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib 
+)
 
 ament_package()
