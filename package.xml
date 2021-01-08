@@ -9,6 +9,9 @@
   <license>Apache 2.0</license>
 
   <buildtool_depend>ament_cmake_rolling</buildtool_depend>
+
+  <build_depend>pkg-config</build_depend>
+
   <depend>tinyxml</depend>
 
 </package>
