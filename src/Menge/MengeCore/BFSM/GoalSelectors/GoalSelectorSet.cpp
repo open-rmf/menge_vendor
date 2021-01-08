@@ -39,7 +39,7 @@ Any questions or comments should be sent to the authors {menge,geom}@cs.unc.edu
 #include "MengeCore/BFSM/GoalSelectors/GoalSelectorRandom.h"
 #include "MengeCore/BFSM/GoalSet.h"
 
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 #include <cassert>
 #include <sstream>

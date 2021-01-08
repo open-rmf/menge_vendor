@@ -1,6 +1,6 @@
 #include "MengeCore/Agents/ProfileSelectors/profile_selector_random.h"
 
-#include "tinyxml/tinyxml.h"
+#include "tinyxml.h"
 
 namespace Menge {
 namespace Agents {

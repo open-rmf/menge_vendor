@@ -38,7 +38,7 @@ Any questions or comments should be sent to the authors {menge,geom}@cs.unc.edu
 
 #include "MengeCore/ProjectSpec.h"
 
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 #include "MengeCore/Runtime/SimulatorDB.h"
 #include "MengeCore/Runtime/os.h"

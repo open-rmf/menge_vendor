@@ -41,7 +41,7 @@ Any questions or comments should be sent to the authors {menge,geom}@cs.unc.edu
 #include "MengeCore/Agents/PrefVelocity.h"
 #include "MengeCore/PluginEngine/Attribute.h"
 
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 #include <algorithm>
 #include <cassert>

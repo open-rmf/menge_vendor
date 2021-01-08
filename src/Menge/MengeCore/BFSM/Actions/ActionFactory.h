@@ -28,7 +28,7 @@
 #include "MengeCore/CoreConfig.h"
 #include "MengeCore/PluginEngine/ElementFactory.h"
 
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 #include <string>
 

@@ -41,7 +41,7 @@ Any questions or comments should be sent to the authors {menge,geom}@cs.unc.edu
 #include "MengeVis/SceneGraph/GLLight.h"
 #include "MengeVis/Viewer/Watermark.h"
 
-#include "tinyxml/tinyxml.h"
+#include "tinyxml.h"
 
 #include <fstream>
 #include <iostream>
