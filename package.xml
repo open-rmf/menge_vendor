@@ -8,6 +8,8 @@
   <maintainer email="fredshao@openrobotics.org">Shao Guoliang</maintainer>
   <license>Apache 2.0</license>
 
+  <build_depend>pkg-config</build_depend>
+
   <depend>tinyxml</depend>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
