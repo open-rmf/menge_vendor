@@ -30,7 +30,7 @@
 
 #include <string>
 
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 namespace Menge {
 

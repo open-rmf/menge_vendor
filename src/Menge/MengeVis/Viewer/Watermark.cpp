@@ -51,7 +51,7 @@ Any questions or comments should be sent to the authors {menge,geom}@cs.unc.edu
 #else
 #include "GL/gl.h"
 #endif
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 namespace MengeVis {
 
