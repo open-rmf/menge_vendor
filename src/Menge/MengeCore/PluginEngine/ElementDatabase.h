@@ -26,7 +26,7 @@
 
 #include "MengeCore/Runtime/Logger.h"
 
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 #include <list>
 #include <string>
