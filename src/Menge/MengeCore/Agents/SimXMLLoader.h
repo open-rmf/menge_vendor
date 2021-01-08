@@ -26,7 +26,7 @@
 
 #include "MengeCore/mengeCommon.h"
 
-#include "tinyxml/tinyxml.h"
+#include "tinyxml.h"
 
 #include <string>
 

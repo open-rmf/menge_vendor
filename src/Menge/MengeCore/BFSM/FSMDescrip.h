@@ -31,7 +31,7 @@
 #include "MengeCore/resources/ResourceManager.h"
 #include "MengeCore/resources/VectorField.h"
 
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 #include <list>
 #include <map>

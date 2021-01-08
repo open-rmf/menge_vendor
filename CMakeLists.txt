@@ -21,6 +21,8 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(tinyxml REQUIRED tinyxml)
 
 set(MENGE_SRC_DIR ${CMAKE_SOURCE_DIR}/src/Menge)
 message("menge_source_dir " ${MENGE_SRC_DIR})
@@ -53,7 +55,9 @@ add_library(
 	${source_files}
 )
 
-target_link_libraries ( menge PUBLIC dl PRIVATE tinyxml )
+target_include_directories( menge PUBLIC ${tinyxml_INCLUDE_DIRS} )
+
+target_link_libraries ( menge PUBLIC dl PRIVATE ${tinyxml_LIBRARIES} )
 
 set_target_properties( menge PROPERTIES LINKER_LANGUAGE CXX )
 
@@ -72,7 +76,6 @@ install(
   DIRECTORY
     ${MENGE_SRC_DIR}/MengeCore
     ${MENGE_SRC_DIR}/../include/
-    ${MENGE_SRC_DIR}/tinyxml
   DESTINATION include
   FILES_MATCHING PATTERN *.h
 )

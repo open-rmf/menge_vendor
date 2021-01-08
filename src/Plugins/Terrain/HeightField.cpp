@@ -42,7 +42,7 @@ Any questions or comments should be sent to the authors {menge,geom}@cs.unc.edu
 #include "MengeVis/SceneGraph/image.h"
 
 #include <cmath>
-#include "thirdParty/tinyxml.h"
+#include "tinyxml.h"
 
 #ifdef _WIN32
 #define MIN min
