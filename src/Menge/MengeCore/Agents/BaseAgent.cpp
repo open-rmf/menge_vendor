@@ -136,7 +136,7 @@ void BaseAgent::updateOrient(float timeStep) {
   const float MAX_ANGLE_CHANGE = timeStep * _maxAngVel;
   float maxCt = cos(MAX_ANGLE_CHANGE);
   float ct = newOrient * _orient;
-  if (ct < maxCt) {
+  if (!(_orient._x == 0 && _orient._y == 0) && ct < maxCt) {
     // changing direction at a rate greater than _maxAngVel
     float maxSt = sin(MAX_ANGLE_CHANGE);
     if (det(_orient, newOrient) > 0.f) {
