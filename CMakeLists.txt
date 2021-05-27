@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(menge)
+project(menge_vendor)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -50,25 +50,25 @@ file(
 )
 
 add_library(
-	menge
+	menge_vendor
 	SHARED
 	${source_files}
 )
 
-target_include_directories( menge PUBLIC ${tinyxml_INCLUDE_DIRS} )
+target_include_directories( menge_vendor PUBLIC ${tinyxml_INCLUDE_DIRS} )
 
-target_link_libraries ( menge PUBLIC dl PRIVATE ${tinyxml_LIBRARIES} )
+target_link_libraries ( menge_vendor PUBLIC dl PRIVATE ${tinyxml_LIBRARIES} )
 
-set_target_properties( menge PROPERTIES LINKER_LANGUAGE CXX )
+set_target_properties( menge_vendor PROPERTIES LINKER_LANGUAGE CXX )
 
 include(GNUInstallDirs)
 
 ament_export_include_directories(include)
 
-ament_export_targets(menge HAS_LIBRARY_TARGET)
+ament_export_targets(menge_vendor HAS_LIBRARY_TARGET)
 
-install(TARGETS menge
-  EXPORT menge
+install(TARGETS menge_vendor
+  EXPORT menge_vendor
   DESTINATION lib
 )
 
