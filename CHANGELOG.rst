@@ -2,8 +2,8 @@
 Changelog for package menge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.0 (2023-06-06)
+------------------
 * First build workflow (`#9 <https://github.com/open-rmf/menge_vendor/pull/9>`_)
 * Contributors: Esteban Martinena Guerrero
 
