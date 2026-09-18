@@ -2,8 +2,8 @@
 Changelog for package menge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.5.0 (2026-09-18)
+------------------
 * Add triage github action (`#15 <https://github.com/open-rmf/menge_vendor/issues/15>`_)
 * Contributors: Luca Della Vedova
 
