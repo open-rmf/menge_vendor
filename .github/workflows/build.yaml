@@ -5,6 +5,14 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      ros_distribution:
+        description: 'ROS distribution to build (empty = default matrix; options: https://github.com/open-rmf/rmf_ci_templates/blob/main/.github/workflows/reusable_build.yaml)'
+        type: string
+      repos_branch_override:
+        description: 'Branch of open-rmf/rmf for rmf.repos (auto = match ros_distribution)'
+        type: string
+        default: 'main'
   schedule:
     - cron: '0 0 1 * *'
 
@@ -16,3 +24,5 @@ jobs:
       # NOTE: Avoid adding comments in the package lines, this can break some of the called scripts in github actions
       packages: |
             menge_vendor
+      ros-distribution: ${{ inputs.ros_distribution || '' }}
+      repos-branch-override: ${{ inputs.repos_branch_override || 'main' }}
