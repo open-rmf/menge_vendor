@@ -2,8 +2,8 @@
 Changelog for package menge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.5.1 (2026-11-13)
+------------------
 * Update CI workflows
 * bump cmake versions (`#17 <https://github.com/open-rmf/menge_vendor/issues/17>`_)
 * Contributors: Aaron Chong
